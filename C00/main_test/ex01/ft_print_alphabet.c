@@ -1,12 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 18:32:18 by felsanto          #+#    #+#             */
-/*   Updated: 2022/04/12 16:12:06 by felsanto         ###   ########.fr       */
+/*   Created: 2022/04/01 00:10:59 by felsanto          #+#    #+#             */
+/*   Updated: 2022/04/11 15:55:07 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include <unistd.h>
+
+void	ft_print_alphabet(void)
+{
+	char c;
+	
+	c = 'a';
+	while (c <= 'z')
+	{
+		write(1, &c, 1);
+		c ++;
+	}
+}

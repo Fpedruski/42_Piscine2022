@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 00:31:37 by felsanto          #+#    #+#             */
-/*   Updated: 2022/04/11 18:55:09 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/04/07 20:50:37 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -30,6 +30,7 @@ void	ft_print_comb2(void)
 		}
 		b++;
 	}
+	write (1, "\n", 1);
 }
 
 void	ft_print(int a, int b)
@@ -53,9 +54,4 @@ void	ft_print(int a, int b)
 		write(1, ",", 1);
 		write(1, " ", 1);
 	}
-}
-
-int main()
-{
-	ft_print_comb2();
 }
