@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 21:13:16 by felsanto          #+#    #+#             */
-/*   Updated: 2022/04/14 01:51:45 by felsanto         ###   ########.fr       */
+/*   Created: 2022/04/13 12:05:10 by felsanto          #+#    #+#             */
+/*   Updated: 2022/04/13 12:47:53 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_str_is_numeric(char *str)
 {
 	int	i;
+	int	boolean;
 
 	i = 0;
-	while (i < n &&  src[i] != '\0')
+	boolean = 1;
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if (str[i] >= 65 && str[i] <= 126)
+		{
+			boolean = 0;
+			return (boolean);
+		}
+		else
+		{
+			boolean = 1;
+		}
+	i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (boolean);
 }

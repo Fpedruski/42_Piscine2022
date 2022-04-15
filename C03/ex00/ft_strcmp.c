@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 21:13:16 by felsanto          #+#    #+#             */
-/*   Updated: 2022/04/14 01:51:45 by felsanto         ###   ########.fr       */
+/*   Created: 2022/04/15 22:11:55 by felsanto          #+#    #+#             */
+/*   Updated: 2022/04/15 23:21:34 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+int ft_strcmp(char *s1, char *s2)
 {
-	int	i;
+	if (*s1 < *s2)
+		return -1;
 
-	i = 0;
-	while (i < n &&  src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	if (*s1 > *s2)
+	   return 1;
+	
+	if (*s1 == '\0')	
+		return 0;
+		
+	return ft_strcmp (s1 + 1, s2 + 1);
+}
+
+int main ()
+{
+	char *s1;
+	char *s2;
+
+	s1 = "Hello";
+	s2 = "Wella";
+
+	ft_strcmp(s1, s2);
 }

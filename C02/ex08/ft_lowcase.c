@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_lowcase.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 21:13:16 by felsanto          #+#    #+#             */
-/*   Updated: 2022/04/14 01:51:45 by felsanto         ###   ########.fr       */
+/*   Created: 2022/04/13 14:53:08 by felsanto          #+#    #+#             */
+/*   Updated: 2022/04/13 14:58:44 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (i < n &&  src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if (str[i] > 65 && str[i] < 90)
+			str[i] += 32;
+	i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (str);
 }

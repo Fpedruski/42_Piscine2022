@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   strncmp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 21:13:16 by felsanto          #+#    #+#             */
-/*   Updated: 2022/04/14 01:51:45 by felsanto         ###   ########.fr       */
+/*   Created: 2022/04/15 23:13:20 by felsanto          #+#    #+#             */
+/*   Updated: 2022/04/15 23:32:24 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
 
-	i = 0;
-	while (i < n &&  src[i] != '\0')
+	while ((*s1 == *s2) && (*s1 != '\0'))
 	{
-		dest[i] = src[i];
-		i++;
+		s1++;
+		s2++;
 	}
-	while (i < n)
+	if (*s1 > *s2 || (*s1 > n) && (*s2 > n))
 	{
-		dest[i] = '\0';
-		i++;
+		printf("Bigger");
+		return 1;
 	}
-	return (dest);
+	if (*s1 < *s2 )
+	{	
+		printf("Smaller");
+			return -1;
+	}
+	return 0;
+} 
+
+int main()
+{
+	unsigned int n = 5;
+	
+	char *s1 = "Hello";
+	char *s2 = "Hell";
+
+
+	ft_strncmp(s1, s2, n);
 }

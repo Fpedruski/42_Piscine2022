@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 21:16:52 by felsanto          #+#    #+#             */
-/*   Updated: 2022/04/12 22:10:21 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/04/13 13:56:10 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -17,33 +17,24 @@
 int ft_str_is_alpha(char *str)
 {
 	int i;
-	char x = 'x';
-	int finish = 0;
+	int boolean;
 
 	i = 0;
+	boolean = 1;
+	
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 48 &&  str[i] <= 57)
+		if (str[i] >= 'A' && str[i] <= 'z')
 		{
-			printf("contain a number");
-			x = 'x';
+			boolean = 1;
 		}
-		 else
+		else
 		{
-			printf("does not contain");
-			x = 'z';
+			boolean = 0;
+			return (0);
 		}
-		if (x == 'x')
-		{
-			finish = 1;
-		}
-			i++;
+		i++;
 	}
-	return (finish);
-}
 
-int main()
-{
-	char *str = " ";
-	ft_str_is_alpha(str);
+	return (boolean);
 }

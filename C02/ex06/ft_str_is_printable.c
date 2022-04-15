@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 21:13:16 by felsanto          #+#    #+#             */
-/*   Updated: 2022/04/14 01:51:45 by felsanto         ###   ########.fr       */
+/*   Created: 2022/04/13 13:18:46 by felsanto          #+#    #+#             */
+/*   Updated: 2022/04/13 14:52:36 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
+	int	boolean;
 
 	i = 0;
-	while (i < n &&  src[i] != '\0')
+	boolean = 1;
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if (str[i] >= 32 && str[i] <= 126)
+			boolean = 1;
+		else
+			return (0);
+	i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (boolean);
 }
