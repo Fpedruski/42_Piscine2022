@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 17:07:09 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/10 16:51:17 by felsanto         ###   ########.fr       */
+/*   Created: 2022/05/10 16:42:31 by felsanto          #+#    #+#             */
+/*   Updated: 2022/05/10 16:43:51 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+# include "libft.h"
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include	<string.h>
-# include	<stdio.h>
-# include	<stdlib.h>
-# include	<unistd.h>
+int	main()
+{
+	int var1 = '1';
+	int var2 = 'A';
+	int var3 = 'a';
+	int var4 = '2';
 
-int	ft_isalpha(int i);
-int	ft_isdigit(int i);
-int	ft_isascii(char c);
-
-#endif
+	printf("%c return %d |", var1, ft_isalpha(var1));
+	printf("%c return %d |", var2, ft_isalpha(var2));
+	printf("%c return %d |", var3, ft_isalpha(var3));
+	printf("%c return %d \n", var4, ft_isalpha(var4));
+	return (0);
+}
