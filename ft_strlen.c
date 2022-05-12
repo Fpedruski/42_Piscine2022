@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Switcher <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/12 10:19:07 by Switcher          #+#    #+#             */
-/*   Updated: 2022/05/12 10:34:35 by Switcher         ###   ########.fr       */
+/*   Created: 2022/05/12 14:53:53 by felsanto          #+#    #+#             */
+/*   Updated: 2022/05/12 14:54:31 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-int ft_strlen(char *ch)
+# include "libft.h"
+
+int	ft_strlen(char	*ch)
 {
-	int i;
+	int	i;
 	i = 0;
 
 	while(ch[i] != '\0')
@@ -22,20 +23,7 @@ int ft_strlen(char *ch)
 		{
 			i++;
 		}
-
-
 	}	
 	printf("%d Lenght \n", i);
 	return(i);	
-}
-
-int main()
-{
-	char var1[] = "Hello there";
-
-	char var2[] = "Hey";
-
-	ft_strlen(var1);
-	ft_strlen(var2);
-
 }

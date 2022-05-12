@@ -11,16 +11,16 @@ NAME=libft.a
 
 CC = gcc
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isascii.c main.c
+SRCS = *.c
 
-OBJECTS=ft_isalpha.o ft_isdigit.o ft_isascii.o main.o
+OBJECTS= *.o
 
 INCLUDES=./
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS) libft.h
-	@gcc -Wall -Wextra -Werror -c $(SRCS) -o a.out
+	@gcc -Wall -Wextra -Werror $(SRCS) 
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
 
