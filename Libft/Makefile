@@ -28,7 +28,11 @@ clean:
 	@echo "Cleaning up..."
 	rm *.o
 
+re:
 
+fclean:
+
+.PHONY: clean
 
 
 

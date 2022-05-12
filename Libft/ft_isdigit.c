@@ -6,11 +6,10 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 16:57:27 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/10 16:58:42 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:35:00 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <ctype.h>
+# include "libft.h"
 
 int ft_isdigit(int i)
 {
