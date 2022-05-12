@@ -6,20 +6,14 @@
 /*   By: Switcher <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 10:50:52 by Switcher          #+#    #+#             */
-/*   Updated: 2022/05/12 14:44:17 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:30:42 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/*
-int main()
+int	ft_tolower(int ch)
 {
-	char var1 = 'a';
-	char var2 = 'b';
-
-	printf("%c: ", var1);
-	printf("%c\n", ft_tolower(var1));
-	printf("%c: ", var2);
-	printf("%c\n", ft_toupper(var2));
+	if(ch >= 'A' && ch <= 'Z')
+		return(ch += 32);
+	return (ch);
 }
-*/
