@@ -6,12 +6,12 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:59:52 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/12 19:13:08 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/13 23:04:41 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_isalpha(int i)
+int	ft_isalpha(int i)
 {
 	return ((i >= 65 && i <= 90) || (i >= 97 && i <= 122));
 }

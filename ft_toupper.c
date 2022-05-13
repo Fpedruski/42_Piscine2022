@@ -6,14 +6,14 @@
 /*   By: Switcher <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 10:44:13 by Switcher          #+#    #+#             */
-/*   Updated: 2022/05/12 19:28:51 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/13 22:59:11 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-# include "libft.h"
+#include "libft.h"
 
 int	ft_toupper(int ch)
 {
-	if(ch >= 'a' && ch <= 'z')
-		return(ch -= 32);
-	return(ch);
+	if (ch >= 'a' && ch <= 'z')
+		return (ch -= 32);
+	return (ch);
 }

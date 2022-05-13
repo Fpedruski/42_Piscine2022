@@ -11,9 +11,9 @@ NAME=libft.a
 
 CC = gcc
 
-SRCS = *.c
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isprint.c ft_isascii.c ft_strlen.c ft_toupper.c ft_strrchr.c ft_strchr.c ft_tolower.c main.c 
 
-OBJECTS= *.o
+OBJECTS = ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isprint.o ft_isascii.o ft_strlen.o ft_toupper.o ft_strrchr.o ft_strchr.o ft_tolower.o
 
 INCLUDES=./
 
@@ -26,13 +26,11 @@ $(NAME): $(OBJECTS) libft.h
 
 clean:
 	@echo "Cleaning up..."
-	rm *.o
+	rm $(OBJECTS)
 
-re:
+fclean: clean
+	rm -f $(NAME)
 
-fclean:
+re: fclean all
 
-.PHONY: clean
-
-
-
+.PHONY: all clean fclean re
