@@ -6,23 +6,12 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:35:26 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/12 19:43:48 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/13 23:22:28 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-# include "libft.h"
+#include "libft.h"
 
-
-int	ft_isalnum(int ch)
+int	ft_isalnum(int i)
 {
-	return(ft_isalpha(ch) || ft_isdigit(ch));
+	return (ft_isalpha(i) || ft_isdigit(i));
 }
-/*
-int main()
-{
-	int x = 'A';
-	int z = '2';
-
-	printf("%d", ft_isalnum(x));
-	printf("%d", ft_isalnum(z));
-}
-*/

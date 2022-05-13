@@ -6,14 +6,14 @@
 /*   By: Switcher <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 10:50:52 by Switcher          #+#    #+#             */
-/*   Updated: 2022/05/12 19:30:42 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/13 22:58:04 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_tolower(int ch)
 {
-	if(ch >= 'A' && ch <= 'Z')
-		return(ch += 32);
+	if (ch >= 'A' && ch <= 'Z')
+		return (ch += 32);
 	return (ch);
 }
