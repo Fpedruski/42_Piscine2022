@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:41:34 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/14 00:26:54 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/14 16:57:17 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *str, int ch)
 	}
 	if (result[i] == '\0')
 	{
-		while (result[i] !=  (char)ch && i > 0)
+		while (result[i] != (char)ch && i > 0)
 		{
 			i--;
 		}

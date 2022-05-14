@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:07:09 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/14 00:28:20 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/14 16:51:50 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ int		ft_tolower(int c);
 size_t	ft_strlen(const char *ch);
 char	*ft_strchr(const char *str, int ch);
 char	*ft_strrchr(const char *str, int ch);
+void	*ft_memset(void *dest, int ch, size_t i);
 #endif
