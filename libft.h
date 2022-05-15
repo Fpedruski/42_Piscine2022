@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:07:09 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/14 20:27:11 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/15 21:23:55 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *ch);
 
 char	*ft_strchr(const char *str, int ch);
