@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 16:13:49 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/16 17:35:45 by felsanto         ###   ########.fr       */
+/*   Created: 2022/05/15 22:48:29 by felsanto          #+#    #+#             */
+/*   Updated: 2022/05/15 22:52:16 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isascii(int c)
+void *ft_memmove(void *dst, const void *src, size_t len)
 {
-	return (c >= 0 && c <= 127);
+	
 }

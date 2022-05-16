@@ -1,17 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 16:13:49 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/16 17:35:45 by felsanto         ###   ########.fr       */
+/*   Created: 2022/05/16 22:14:45 by felsanto          #+#    #+#             */
+/*   Updated: 2022/05/16 22:53:59 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memchr(const void *src, int ch, size_t n)
 {
-	return (c >= 0 && c <= 127);
+	unsigned char	*ptr;
+	size_t			i;
+
+	i = 0;
+	ptr = (unsigned char*)src;
+	while(n >= (i++ + 1))
+		if (*(ptr++) == (unsigned char)ch)
+			return ((void*)ptr-- -1);
+	return (0);
+}
+int main()
+{
+	printf("%s", ft_memchr("ABCDEFG",'D',7));
 }
