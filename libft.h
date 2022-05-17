@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:07:09 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/16 22:31:26 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/17 18:35:53 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,6 @@ void	ft_bzero(void *str, size_t n);
 void	*ft_memset(void *dest, int ch, size_t i);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memchr(const void *src, int ch, size_t count);
+void	*ft_memmove(void *dest, const void *src, size_t len);
+
 #endif
