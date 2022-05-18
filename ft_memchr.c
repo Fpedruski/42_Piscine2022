@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 22:14:45 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/17 20:54:03 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/17 20:57:50 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -23,7 +23,9 @@ void	*ft_memchr(const void *src, int ch, size_t n)
 			return ((void*)ptr-- -1);
 	return (0);
 }
+/*
 int main()
 {
 	printf("%s", ft_memchr("ABCDEFG",'D',7));
 }
+*/

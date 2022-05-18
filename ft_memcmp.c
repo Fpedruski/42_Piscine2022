@@ -1,28 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/15 20:34:03 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/18 10:43:03 by felsanto         ###   ########.fr       */
+/*   Created: 2022/05/17 23:41:07 by felsanto          #+#    #+#             */
+/*   Updated: 2022/05/18 10:47:09 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char		*ptr;
-	const unsigned char	*ptr2;
+	unsigned char *ptr;
+	unsigned char *ptr2;
 
-	ptr = (unsigned char *)dst;
-	ptr2 = (unsigned char *)src;
-	if (ptr == NULL && ptr2 == NULL)
+	ptr = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
+
+	if (n == 0)
 		return (0);
-	while (n-- > 0)
-	{
-		*(ptr++) = *(ptr2++);
-	}
-	return (dst);
+		while (*ptr == *ptr2 && --n > 0)
+		{
+			ptr++;
+			ptr2++;
+		}
+	return ((int)(*ptr - *ptr2));
 }
+/*
+int main()
+{
+	char *src = "Hello";
+	char *src2 = "Hxllo";
+	size_t n = 10;
+
+	printf("%d\n", memcmp(src, src2, n));
+	printf("%d\n", ft_memcmp(src, src2, n));
+
+}
+*/
