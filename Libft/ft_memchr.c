@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/15 20:34:03 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/18 10:43:03 by felsanto         ###   ########.fr       */
+/*   Created: 2022/05/16 22:14:45 by felsanto          #+#    #+#             */
+/*   Updated: 2022/05/17 20:57:50 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *src, int ch, size_t n)
 {
-	unsigned char		*ptr;
-	const unsigned char	*ptr2;
+	unsigned char	*ptr;
+	size_t			i;
 
-	ptr = (unsigned char *)dst;
-	ptr2 = (unsigned char *)src;
-	if (ptr == NULL && ptr2 == NULL)
-		return (0);
-	while (n-- > 0)
-	{
-		*(ptr++) = *(ptr2++);
-	}
-	return (dst);
+	i = 0;
+	ptr = (unsigned char*)src;
+	while(n >= (i++ + 1))
+		if (*(ptr++) == (unsigned char)ch)
+			return ((void*)ptr-- -1);
+	return (0);
 }
+/*
+int main()
+{
+	printf("%s", ft_memchr("ABCDEFG",'D',7));
+}
+*/

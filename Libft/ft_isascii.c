@@ -6,12 +6,12 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:13:49 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/13 23:21:49 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/16 17:35:45 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
