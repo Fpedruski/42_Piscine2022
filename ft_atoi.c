@@ -6,42 +6,33 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 10:21:31 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/18 21:32:58 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/19 13:32:01 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	int res;
+	unsigned int res;
 	int sign;
 	int i;
-
+	
+	res = 0;
 	i = 0;
 	sign = 1;
 
-	while (str[i] == 32 || str[i] == '\t' || str[i] == '\v' \
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' \
 		|| str[i] == '\f' || str[i] == '\n' || str[i] == '\r')
-		{
 			i++;
-		}
 	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
+		if (str[i++] == '-')
 			sign = -1;
-		}else if (str[i] == '+')
-		{
-			sign = 1;
-		}
-		i++;
-	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + str[i] - '0';
+		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	return (sign * res);
+	return ((int)(sign * res));
 }
 
 /*
