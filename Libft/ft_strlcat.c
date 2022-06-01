@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 16:43:48 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/19 20:56:04 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:30:11 by Switcher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -38,8 +38,9 @@ size_t ft_strlcat(char *dst, char *src, size_t size)
 	dst[len_dst] = '\0';
 	return (res);
 }
-
+/*
 int main()
 {
 	
 }
+*/

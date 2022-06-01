@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
+/*   By: Switcher <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/12 14:53:53 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/23 20:24:48 by jupiter          ###   ########.fr       */
+/*   Created: 2022/06/01 17:03:46 by Switcher          #+#    #+#             */
+/*   Updated: 2022/06/01 20:55:06 by Switcher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlen(const char	*ch)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
+	char *ptr;
+
+	int i;
 
 	i = 0;
-	while (ch[i] != '\0')
+	ptr = (char*)malloc(sizeof(s1 + 1));
+	if (!ptr)
+		return (NULL);
+
+	while(s1[i] != '\0')
+	{
+		ptr[i] = s1[i];
 		i++;
-	return (i);
+	}
+
+	return (ptr);
+}
+
+int main()
+{
+	printf(" Hallo %s \n", ft_strtrim("Hello", "H"));
 }

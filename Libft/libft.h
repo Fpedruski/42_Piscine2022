@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:07:09 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/19 20:15:58 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:32:10 by Switcher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ size_t	ft_strlcat(char *dst, char *src, size_t size); //CHECK
 
 char	*ft_strchr(const char *str, int ch);
 char	*ft_strrchr(const char *str, int ch);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
 
 void	ft_bzero(void *str, size_t n);
 void	*ft_memset(void *dest, int ch, size_t i);

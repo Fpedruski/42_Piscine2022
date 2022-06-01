@@ -6,14 +6,14 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 10:21:31 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/19 13:32:01 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/05/23 20:37:20 by jupiter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	unsigned int res;
+	int res;
 	int sign;
 	int i;
 	
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	return ((int)(sign * res));
+	return (sign * res);
 }
 
 /*
