@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 20:38:16 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/19 17:08:55 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:46:33 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	count = 0;
 	if (dstsize == 0)
 		return (ft_strlen(src));
-	while(src[count] != '\0' && count < (dstsize - 1))
+	while (src[count] != '\0' && count < (dstsize - 1))
 	{
 		dst[count] = src[count];
 		count++;
