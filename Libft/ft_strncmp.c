@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 22:14:45 by felsanto          #+#    #+#             */
-/*   Updated: 2022/06/02 16:36:28 by felsanto         ###   ########.fr       */
+/*   Created: 2022/06/02 16:24:23 by felsanto          #+#    #+#             */
+/*   Updated: 2022/06/02 17:09:53 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memchr(const void *src, int ch, size_t n)
-{
-	unsigned char	*ptr;
-	size_t			i;
+	int
+	ft_strncmp(const char *s1, const char *s2, size_t n)
+	{
+		int i = 0;
+		char *string1;
+		char *string2;
+		
+		string1 = (char *)s1;
+		string2 = (char *)s2;
+		
+		if (!s1 || !s2)
+			return (0);
 
-	i = 0;
-	ptr = (unsigned char *)src;
-	while (n >= (i++ + 1))
-		if (*(ptr++) == (unsigned char)ch)
-			return ((void *)ptr-- -1);
-	return (0);
-}
-/*
-int main()
-{
-	printf("%s", ft_memchr("ABCDEFG",'D',7));
-}
-*/
+		while(i < n)
+		{
+			if (*string1++ == *string2++)
+				return (0);
+		}
+	}
+
+	int
+	main()
+	{
+		ft_strncmp("Hello", "There", 5);
+	}

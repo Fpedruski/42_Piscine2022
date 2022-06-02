@@ -1,26 +1,26 @@
-/*************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 10:21:31 by felsanto          #+#    #+#             */
-/*   Updated: 2022/05/23 20:37:20 by jupiter          ###   ########.fr       */
+/*   Created: 2022/06/02 16:33:57 by felsanto          #+#    #+#             */
+/*   Updated: 2022/06/02 16:40:38 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	int res;
-	int sign;
-	int i;
-	
+	int	res;
+	int	sign;
+	int	i;
+
 	res = 0;
 	i = 0;
 	sign = 1;
-
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' \
 		|| str[i] == '\f' || str[i] == '\n' || str[i] == '\r')
 			i++;
@@ -34,7 +34,6 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
-
 /*
 int main()
 {

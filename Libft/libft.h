@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:07:09 by felsanto          #+#    #+#             */
-/*   Updated: 2022/06/01 14:32:10 by Switcher         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:26:49 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <ctype.h>
 
 int		ft_isalpha(int i);
 int		ft_isdigit(int i);
@@ -38,11 +36,14 @@ char	*ft_strchr(const char *str, int ch);
 char	*ft_strrchr(const char *str, int ch);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strdup(const char *s1);
 
 void	ft_bzero(void *str, size_t n);
 void	*ft_memset(void *dest, int ch, size_t i);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memchr(const void *src, int ch, size_t count);
 void	*ft_memmove(void *dest, const void *src, size_t len); //CHECK
+void	*ft_calloc(size_t count, size_t size);
 
 #endif
