@@ -14,7 +14,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS) libft.h
 	@gcc -Wall -Wextra -Werror -c $(SRCS)
-	@ar -rs $@ $^
+	@ar -rs $@ $(OBJECTS)
 
 clean:
 	@echo "Cleaning up..."
