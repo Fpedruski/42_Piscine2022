@@ -6,11 +6,10 @@
 /*   By: Switcher <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 17:03:46 by Switcher          #+#    #+#             */
-/*   Updated: 2022/06/15 17:27:34 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/06/16 10:46:18 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -28,14 +27,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (set[j] != s1[i])
 		{
 			ptr[i] = s1[i];
-			printf("%c", s1[i]);
 		j++;
 		}
 	i++;
 	}
 	return (ptr);
-}
-int main()
-{
-	printf(" Test Hello: %c \n", *ft_strtrim("Helxlo", "llo"));
 }

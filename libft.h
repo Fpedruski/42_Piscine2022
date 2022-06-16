@@ -6,7 +6,7 @@
 /*   By: felsanto <felsanto@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:07:09 by felsanto          #+#    #+#             */
-/*   Updated: 2022/06/15 15:03:44 by felsanto         ###   ########.fr       */
+/*   Updated: 2022/06/16 11:15:30 by felsanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlen(const char *ch);
+size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, char *src, size_t size); //CHECK 
 
 char	*ft_strchr(const char *str, int ch);
